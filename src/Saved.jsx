@@ -16,9 +16,11 @@ const Saved = ({ savedData, deleteItem, viewItem }) => {
     <>
       <div className="saved-component">
         <p className="saved-title">Saved Grades</p>
-        {(selectedData && viewOppened) && (
+        <div className='saved-viewDetails'>
+          {(selectedData && viewOppened) && (
           <ViewDetails itemData={selectedData} setViewOppened={setViewOppened} />
         )}
+        </div>
         <div className="saved-list">
           {savedData.map(subject => (
             <div key={subject.id} className="saved-object">
