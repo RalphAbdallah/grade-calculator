@@ -5,6 +5,7 @@
   font-weight: bold;
   position: fixed;
   height: 40px;
+  padding: 5px 0;
   top: 0;
   left: 0;
   right: 0;
@@ -211,6 +212,7 @@
 @media (max-width: 560px) {
   .header {
     font-size: x-large;
+    padding: 2px 0;
   }
   .header-middle {
     font-size: 20px;
