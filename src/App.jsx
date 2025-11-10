@@ -115,7 +115,7 @@ function App() {
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => setIsSavedOpen(prev => !prev)}
           >
-            <img src="src/assets/Frame.svg" alt="" />
+            <img src="Frame.svg" alt="" />
             
 
           </button>
