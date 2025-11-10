@@ -209,6 +209,32 @@
   border-radius: 20px;
 }
 
+/* Fix for grey screen on iPhone Safari */
+.saved-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.saved-overlay-inner {
+  position: relative;
+  z-index: 1000;
+}
+
+.saved-overlay .saved-component {
+  position: relative;
+  width: 300px;
+  min-height: 400px;
+  border-radius: 20px;
+  background-color: white;
+}
+
 @media (max-width: 560px) {
   .header {
     font-size: x-large;
