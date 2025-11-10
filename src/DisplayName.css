@@ -30,6 +30,13 @@
   margin-top: 5px;
   padding: 5px 15px;
   background-color: #646cff;
+  transition: 300ms;
+}
+
+.popup button:hover{
+  background-color: #4b54e1;
+  border: 1px solid #1a1a1a;
+  cursor: pointer;
 }
 .background-darker{
   background-color: black;
