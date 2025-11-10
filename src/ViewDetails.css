@@ -95,5 +95,6 @@
 @media (max-width: 1130px) {
   .view-component{
     right: auto;
+    left: auto;
   }
 }
