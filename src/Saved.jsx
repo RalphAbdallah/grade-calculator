@@ -3,24 +3,26 @@ import './saved.css'
 import ViewDetails from './ViewDetails'
 import capitalizeWord from './utils/capitalize.js'
 
-const Saved = ({ savedData, deleteItem, viewItem }) => {
+const Saved = ({ savedData, deleteItem, viewItem, viewOppened, setViewOppened}) => {
   const [selectedData, setSelectedData] = useState('')
-  const [viewOppened, setViewOppened] = useState(false)
 
   const handleViewDetails = (data) => {
     setSelectedData(data)
     setViewOppened(true)
+    console.log(viewOppened);
   }
 
   return (
     <>
       <div className="saved-component">
-        <p className="saved-title">Saved Grades</p>
         <div className='saved-viewDetails'>
           {(selectedData && viewOppened) && (
-          <ViewDetails itemData={selectedData} setViewOppened={setViewOppened} />
-        )}
+            <>
+              <ViewDetails itemData={selectedData} setViewOppened={setViewOppened} />
+            </>
+          )}
         </div>
+        <p className="saved-title">Saved Grades</p>
         <div className="saved-list">
           {savedData.map(subject => (
             <div key={subject.id} className="saved-object">

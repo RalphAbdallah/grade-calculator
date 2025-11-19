@@ -20,7 +20,6 @@ const ViewDetails = ({itemData, setViewOppened}) => {
         <button onClick={() => setViewOppened(false)}>Go back</button>
       </div>
     </div>
-    <div className='background-darker'></div>
     </>
     
   )

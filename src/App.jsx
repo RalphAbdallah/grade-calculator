@@ -20,6 +20,8 @@ function App() {
   const [width, setWidth] = useState(window.innerWidth)
   const [isSavedOpen, setIsSavedOpen] = useState(window.innerWidth >= SAVED_BREAKPOINT)
 
+  const [viewOppened, setViewOppened] = useState(false)
+
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
@@ -127,16 +129,20 @@ function App() {
           savedData={savedData}
           deleteItem={deleteItem}
           viewItem={viewItem}
+          viewOppened={viewOppened}
+          setViewOppened={setViewOppened}
         />
       )}
 
       {!isLarge && isSavedOpen && (
-        <div className="saved-overlay" onClick={() => setIsSavedOpen(false)} aria-hidden="true">
+        <div className="saved-overlay"  onClick={() => setIsSavedOpen(false)} aria-hidden="true">
           <div className="saved-overlay-inner" onClick={(e) => e.stopPropagation()}>
             <Saved
               savedData={savedData}
               deleteItem={deleteItem}
               viewItem={viewItem}
+              viewOppened={viewOppened}
+              setViewOppened={setViewOppened}
             />
           </div>
         </div>
