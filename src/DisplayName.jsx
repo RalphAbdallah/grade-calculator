@@ -16,10 +16,11 @@ const DisplayName = ({setSavedButton, value, setValue, onConfirm, resetBlueprint
           alert('Please enter a valid course name.');
           return;
         }
-        setSavedButton(false); 
-        onConfirm(); 
-        resetBlueprint(); 
-        reloadPage();
+        else {
+          setSavedButton(false); 
+          onConfirm(); 
+          resetBlueprint(); 
+        }
       }}>Confirm</button>
     </div>
     <div className='background-darker'></div>

@@ -1,6 +1,7 @@
 .popup{
   background-color: #242424;
   padding: 20px 30px;
+  padding-top: 40px;
   font-size: 30px;
   font-weight: bold;
   display: flex;
@@ -16,7 +17,10 @@
 }
 .popup-exit{
   display: flex;
-  margin-left: 200px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  padding:0px 30px;
 }
 .popup input{
   font-size: 16px;
