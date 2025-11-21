@@ -11,7 +11,16 @@ const DisplayName = ({setSavedButton, value, setValue, onConfirm, resetBlueprint
       <div>
         <input type="text" value={value} placeholder='Put course name here' onChange={(e) => {setValue(e.target.value);{console.log(e);}}} />
       </div>
-      <button onClick={() => {setSavedButton(false); onConfirm(); resetBlueprint(); reloadPage()}}>Confirm</button>
+      <button onClick={() => {
+        if (value.trim() === '') {
+          alert('Please enter a valid course name.');
+          return;
+        }
+        setSavedButton(false); 
+        onConfirm(); 
+        resetBlueprint(); 
+        reloadPage();
+      }}>Confirm</button>
     </div>
     <div className='background-darker'></div>
   </>)
