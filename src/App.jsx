@@ -136,6 +136,7 @@ function App() {
 
       {!isLarge && isSavedOpen && (
         <div className="saved-overlay"  onClick={() => setIsSavedOpen(false)} aria-hidden="true">
+          <div className="background-dark"></div>
           <div className="saved-overlay-inner" onClick={(e) => e.stopPropagation()}>
             <Saved
               savedData={savedData}
@@ -281,6 +282,9 @@ function App() {
             />
           )}
         </div>
+        <button onClick={() => {localStorage.clear()}}>
+          Clear LS
+        </button>
       </div>
     </>
   )
