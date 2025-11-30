@@ -14,6 +14,7 @@ const Saved = ({ savedData, deleteItem, viewItem, viewOppened, setViewOppened}) 
 
   return (
     <>
+    <div className={`mobile-dim ${savedData.length > 0 ? "show" : ""}`}></div>
       <div className="saved-component">
         <div className='saved-viewDetails'>
           {(selectedData && viewOppened) && (

@@ -8,8 +8,14 @@
   justify-content: center;
   align-items: center;
   z-index: 400;
-
+  background-color: rgba(0, 0, 0, 0.55); /* dim the background */
+  opacity: 0;                             /* start transparent */
+  animation: viewOverlayFadeIn 250ms ease forwards; /* smooth fade-in */
 }
+.view-page.fade-out {
+  animation: viewOverlayFadeOut 250ms ease forwards;
+}
+
 
 .view-component{
   padding: 30px 40px; 
@@ -97,6 +103,25 @@
   z-index: 20;
 }
 
+@keyframes viewOverlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes viewOverlayFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
 @media (max-width: 1000px) {
   .view-page{
     position: absolute !important;
@@ -110,3 +135,4 @@
     z-index: 400;
   }
 }
+

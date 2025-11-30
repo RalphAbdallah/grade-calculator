@@ -115,6 +115,25 @@
   justify-content: center;
 }
 
+.mobile-dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 250;
+  display: none;
+}
+
+/* show when active */
+.mobile-dim.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 /* Safety net: also switch off fixed on small screens */
@@ -126,5 +145,8 @@
     width: min(92vw, 360px);
     max-height: 80vh;
     overflow: auto;
+  }
+  .mobile-dim {
+    display: block;
   }
 }
