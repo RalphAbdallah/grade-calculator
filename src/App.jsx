@@ -282,9 +282,6 @@ function App() {
             />
           )}
         </div>
-        <button onClick={() => {localStorage.clear()}}>
-          Clear LS
-        </button>
       </div>
     </>
   )
